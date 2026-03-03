@@ -1,0 +1,19 @@
+[package]
+name = "smale3886/shinmon-backend" # Apna Wasmer username yahan daalna
+version = "0.1.0"
+description = "ShinMon IPTV Secure Edge Backend"
+
+[dependencies]
+"wasmer/php" = "^8.2"
+
+[fs]
+"/app" = "."
+
+[[command]]
+name = "php-server"
+runner = "https://webc.org/runner/wcgi"
+module = "wasmer/php:php-cgi"
+
+[command.annotations.wcgi]
+document_root = "/app"
+
