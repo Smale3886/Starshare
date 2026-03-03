@@ -7,7 +7,7 @@ $ch_id = $_GET['ch'];
 
 // 1. Ask InfinityFree if Token is Valid (Cross-Server check)
 // APNE INFINITYFREE DOMAIN KA NAAM YAHAN DAALO
-$infinity_verify_url = "http://YOUR_INFINITY_FREE_DOMAIN.com/verify.php?token=" . $token_str;
+$infinity_verify_url = "https://shinmon.gt.tc/StarShare/verify.php?token=" . $token_str;
 
 $verify_ch = curl_init($infinity_verify_url);
 curl_setopt($verify_ch, CURLOPT_RETURNTRANSFER, true);
